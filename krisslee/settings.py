@@ -5,6 +5,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+INTERNAL_IPS = ('127.0.0.1', '84.202.67.147',)
+
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
@@ -75,6 +77,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
