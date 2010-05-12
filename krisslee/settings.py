@@ -5,7 +5,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-INTERNAL_IPS = ('127.0.0.1', '84.202.67.147',)
+INTERNAL_IPS = ('127.0.0.1', '129.241.186.214', '84.202.67.147',)
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -54,6 +54,12 @@ ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '-kh5g-d*@w$w#584kdk!%(=*b@o)%zzmn1_k5ed323ovl&5g)p'
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media")
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
@@ -87,4 +93,5 @@ INSTALLED_APPS = (
     'tagging',
     'basic.blog',
     'basic.inlines',
+    'krisslee.frontpage', #needed?
 )

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Kriss Lee Festivalen 2010</title>
+  <link rel="stylesheet" href="{{ MEDIA_URL }}styles/reset-fonts-grids.css" type="text/css">
+  <link rel="stylesheet" href="{{ MEDIA_URL }}styles/base-min.css" type="text/css">
+  <link rel="stylesheet" href="{{ MEDIA_URL }}styles/styles.css" type="text/css">
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.4.2.min.js"></script>
+  {% block extrascripts %}{% endblock %}
+</head>
+<body>
+  <div id="doc2" class="yui-t4"> 
+    <div id="hd" role="banner">
+      <a href="http://krisslee.blogspot.com/"><img class="logo" src="kriss_lee_sm.png" /></a>
+    </div> 
+    <div id="bd" role="main"> 
+      <div id="yui-main"> 
+        <div class="yui-b">
+          <div class="yui-g"> 
+            <!-- MENY? --> 
+          </div> 
+          <div class="yui-g"> 
+            <img class="joern" src="{{ MEDIA_URL }}pics/joern.jpg" />
+            {% block content %}{% endblock %}
+            <!-- YOUR DATA GOES HERE --> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="yui-b">
+        Sidebar
+         <!-- SIDEBAR? -->
+      </div> 
+    </div> 
+    <div id="ft" role="contentinfo">
+      <p>&copy; Kriss Lee Festivalen 2010</p>
+    </div> 
+  </div> 
+</body>
+</html>
