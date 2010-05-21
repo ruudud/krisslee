@@ -13,12 +13,20 @@
   </script>
 {% endblock %}
 {% block content %}
+  <p>
+    Hei, og velkommen. Denne nettsiden blir fortløpende oppdatert.<br />
+    Det er ikke satt en frist på påmelding enda, 
+    men for at vi skal få et anslag på hvor mange t-skjorter som må bestilles,
+    ber vi alle melde seg på så raskt som mulig.<br />
+    Dersom noe er usikkert rundt påmelding, ikke nøl med å kontakte
+    <a href="mailto:salg@krisslee.no">salg@krisslee.no</a>.
+  </p>
   {% if pictures %}
-  <ul id="gallery">
-    {% for pic in pictures %}
-      <li><img src="{{ MEDIA_URL }}pics/{{ pic }}" /></li>
-    {% endfor %}
-  </ul>
+    <ul id="gallery">
+      {% for pic in pictures %}
+        <li><img src="{{ MEDIA_URL }}pics/{{ pic }}" /></li>
+      {% endfor %}
+    </ul>
   {% endif %}
   
 {% endblock %}

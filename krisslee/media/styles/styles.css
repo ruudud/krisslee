@@ -24,6 +24,10 @@ h1, h2 {
     display: none;
 }
 
+#content {
+    margin-top: 5px;
+}
+
 /** Menu styles **/
 #menu ul {
     list-style: none;
