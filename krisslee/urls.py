@@ -13,10 +13,13 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^$', 'krisslee.frontpage.views.front', name='frontpage'),
+    (r'^$', 'krisslee.frontpage.views.front'),
     (r'^admin/', include(admin.site.urls)),
+    (r'^registration/', 'django.views.generic.simple.direct_to_template', {
+            'template': 'registration.html', 
+        }),
     (r'^blog/', include('basic.blog.urls')),
-    (r'comments/', include('django.contrib.comments.urls')),
+    (r'^comments/', include('django.contrib.comments.urls')),
 )
 #Hack to get testserver to serve media
 if settings.DEBUG:

@@ -1,4 +1,24 @@
 {% extends "base.html" %}
+{% block extrascripts %}
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/galleria.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      Galleria.loadTheme('{{ MEDIA_URL }}js/themes/classic/galleria.classic.js');
+     {% if pictures %}
+       $('#gallery').galleria({
+         transition_speed: 700 
+       });
+     {% endif %}
+    });
+  </script>
+{% endblock %}
 {% block content %}
-Teste
+  {% if pictures %}
+  <ul id="gallery">
+    {% for pic in pictures %}
+      <li><img src="{{ MEDIA_URL }}pics/{{ pic }}" /></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  
 {% endblock %}

@@ -9,26 +9,38 @@
   {% block extrascripts %}{% endblock %}
 </head>
 <body>
-  <div id="doc2" class="yui-t4"> 
+  <div id="doc" class="yui-t4"> 
     <div id="hd" role="banner">
-      <a href="http://krisslee.blogspot.com/"><img class="logo" src="kriss_lee_sm.png" /></a>
+      <a href="http://krisslee.blogspot.com/"><img src="{{ MEDIA_URL }}imgs/logo.png" /></a>
     </div> 
     <div id="bd" role="main"> 
       <div id="yui-main"> 
         <div class="yui-b">
-          <div class="yui-g"> 
-            <!-- MENY? --> 
+          <div id="menu" class="yui-g"> 
+            <ul>
+                <li><a href="/">Forside</a></li>
+                <li><a href="http://krisslee.blogspot.com/">Blogg</a></li>
+                <li><a href="/registration/">Registrering</a></li>
+            </ul>
           </div> 
           <div class="yui-g"> 
-            <img class="joern" src="{{ MEDIA_URL }}pics/joern.jpg" />
             {% block content %}{% endblock %}
-            <!-- YOUR DATA GOES HERE --> 
           </div> 
         </div> 
       </div> 
       <div class="yui-b">
-        Sidebar
-         <!-- SIDEBAR? -->
+        <h3>Bookinger 2010</h3>
+        <p>
+          The Åkseths<br/>
+          Brødrene Strømme<br/>
+          Amiga Egil & The Joysticks<br/>
+          Jimmy Jazz<br/>
+        </p>
+        <h3>Frivillig</h3>
+        <p>
+          Kontakt <a
+          href="mailto:personalansvarlig@krisslee.no">personalansvarlig</a>.
+        </p>
       </div> 
     </div> 
     <div id="ft" role="contentinfo">

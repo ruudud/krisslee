@@ -1,12 +1,17 @@
 /** General styles **/
 html {
     padding-top: 5px;
+    background: #000;
+    color: #FFF;
 }
 a:link, a:visited, a:active {
-    color: #00F;
+    color: #FFF;
 }
 img {
     border: 0;
+}
+h1, h2 {
+    text-align: center;
 }
 #ft {
     text-align: center;
@@ -17,4 +22,27 @@ img {
 }
 .hidden {
     display: none;
+}
+
+/** Menu styles **/
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    text-align: center;
+    border-bottom: 1px solid #FFF;
+}
+#menu li {
+    display: inline;
+}
+#menu li a {
+    text-decoration: none;
+    border: 1px solid #FFF;
+    border-bottom: 0px;
+    padding: 0.2em 1em 0.1em 1em;
+}
+#menu li a:hover {
+    background-color: #FFF;
+    color: #000;
 }
