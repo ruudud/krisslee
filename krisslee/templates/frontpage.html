@@ -24,7 +24,7 @@
   {% if pictures %}
     <ul id="gallery">
       {% for pic in pictures %}
-        <li><img src="{{ MEDIA_URL }}pics/{{ pic }}" /></li>
+        <li><img src="{{ MEDIA_URL }}pics/{{ pic }}" alt="{{ pic }}" /></li>
       {% endfor %}
     </ul>
   {% endif %}
