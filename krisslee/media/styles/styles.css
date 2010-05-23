@@ -1,7 +1,7 @@
 /** General styles **/
 html {
     padding-top: 5px;
-    background: #000;
+    background-color: #000;
     color: #FFF;
 }
 a:link, a:visited, a:active {
@@ -29,6 +29,13 @@ h1, h2 {
 
 #content {
     margin-top: 5px;
+}
+
+#countdown {
+    position: absolute;
+    left: 860px;
+    top: 10px;
+    color: #FFF;
 }
 
 /** Menu styles **/

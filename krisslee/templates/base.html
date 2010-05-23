@@ -6,13 +6,16 @@
   <link rel="stylesheet" href="{{ MEDIA_URL }}styles/reset-fonts-grids.css" type="text/css" />
   <link rel="stylesheet" href="{{ MEDIA_URL }}styles/base-min.css" type="text/css" />
   <link rel="stylesheet" href="{{ MEDIA_URL }}styles/styles.css" type="text/css" />
-  <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.countdown.min.js"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/def.js"></script>
   {% block extrascripts %}{% endblock %}
 </head>
 <body>
   <div id="doc" class="yui-t4"> 
     <div id="hd">
       <a href="http://krisslee.blogspot.com/"><img alt="Kriss Lee 2010" src="{{ MEDIA_URL }}imgs/logo.png" /></a>
+      <div id="countdown"></div>
     </div> 
     <div id="bd"> 
       <div id="yui-main"> 
@@ -33,6 +36,9 @@
         <a href="/registration/">
           <img alt="Meld deg på!" src="{{ MEDIA_URL }}imgs/meldpaa.png" />
         </a>
+        <br/>
+        <img alt="Booking 2010" src="{{ MEDIA_URL }}imgs/booking.png" />
+        {% comment %}
         <h3>Bookinger 2010</h3>
         <p>
           The Åkseths<br/>
@@ -40,6 +46,7 @@
           Amiga Egil &amp; The Joysticks<br/>
           Jimmy Jazz<br/>
         </p>
+        {% endcomment %}
         <h3>Frivillig</h3>
         <p>
           Trenger du <b>ekstra</b> god karma?
