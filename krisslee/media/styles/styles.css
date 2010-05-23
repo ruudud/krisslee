@@ -10,8 +10,21 @@ a:link, a:visited, a:active {
 img {
     border: 0;
 }
+hr {
+    color: #AAA;
+    background-color: #AAA;
+    text-align: center;
+    margin-left: auto;
+    height: 1px;
+    border-width: 0px;
+    margin: 0;
+}
 h1, h2 {
     text-align: center;
+}
+h3 {
+    display: inline;
+    margin-right: 1em;
 }
 #info h3 {
     margin: 1em 0px 0.2em 0px;
