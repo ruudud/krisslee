@@ -13,11 +13,11 @@ img {
 hr {
     color: #AAA;
     background-color: #AAA;
+    margin: 5px 0;
     text-align: center;
     margin-left: auto;
     height: 1px;
     border-width: 0px;
-    margin: 0;
 }
 h1, h2 {
     text-align: center;
