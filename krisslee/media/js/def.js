@@ -7,7 +7,7 @@ $(function() {
               alwaysExpire: true,
               until: lee_date,
               compact: true,
-              layout:'Slapp av, bare <br/><span>{dn}</span>d <span>{hnn}</span>t <span>{mnn}</span>m <span>{snn}</span>s igjen.'
+              layout:'Slapp av, det er bare <br/><span>{dn}</span>d <span>{hnn}</span>t <span>{mnn}</span>m <span>{snn}</span>s igjen.'
           });
   }
 });
