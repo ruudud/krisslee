@@ -89,8 +89,5 @@ INSTALLED_APPS = (
     'django.contrib.comments',
     'django.contrib.markup',
     #'django.contrib.sites',
-    'tagging',
-    'basic.blog',
-    'basic.inlines',
     'krisslee.frontpage', #needed?
 )

@@ -33,9 +33,6 @@ h3 {
     text-align: center;
     padding-top: 10px;
 }
-.center {
-    text-align: center;
-}
 .hidden {
     display: none;
 }
@@ -49,6 +46,41 @@ h3 {
     left: 860px;
     top: 10px;
     color: #FFF;
+}
+
+/** Text styling **/
+.center {
+    text-align: center;
+}
+
+.head {
+    margin-right: 1em;
+    font-weight: bold;
+    font-size: 108%;
+}
+
+/** Image animation **/
+
+#reg_cont {
+    text-align: center;
+    margin-left: auto;
+}
+
+#regImg {
+    width: 160;
+    height: 70px;
+}
+.padd_0 {
+    padding: 4px 0 3px 2px;
+}
+.padd_1 {
+    padding: 4px 2px 3px 0;
+}
+.padd_2 {
+    padding: 5px 0 2px 0;
+}
+.padd_3 {
+    padding: 2px 0 5px 0;
 }
 
 /** Menu styles **/
