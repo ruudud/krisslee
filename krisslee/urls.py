@@ -18,8 +18,9 @@ urlpatterns = patterns('',
     (r'^registration/', 'django.views.generic.simple.direct_to_template', {
             'template': 'registration.html', 
         }),
-    (r'^blog/', include('basic.blog.urls')),
-    (r'^comments/', include('django.contrib.comments.urls')),
+    (r'^colophon/', 'django.views.generic.simple.direct_to_template', {
+            'template': 'colophon.html', 
+        }),
 )
 #Hack to get testserver to serve media
 if settings.DEBUG:
