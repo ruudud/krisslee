@@ -22,19 +22,41 @@ Galleria.themes.create({
         this.rescale();
         this.$('loader').show().fadeTo(200, 0.4);
         this.$('counter').show().fadeTo(200, 0.4);
-        
+       
+        var playing = true;
+ 
         this.$('container').hover(this.proxy(function() {
             this.$('image-nav-left,image-nav-right').fadeIn(200);
+            this.pause();
+            playing = false;
         }), this.proxy(function() {
             this.$('image-nav-left,image-nav-right').fadeOut(500);
+            this.play(5000);
+            playing = true;
         }));
         
         this.$('image-nav-left,image-nav-right').hide();
         this.$('counter').show();
         
-        //var elms = this.$('info-link,info-close,info-text').click(function() {
-        //    elms.toggle();
-        //});
+        this.$('stage').hover(
+            this.proxy(function() {this.pause();}),
+            this.proxy(function() {this.play(5000);})
+        );
+       
+        this.attachKeyboard({
+            left: this.prev, 
+            right: this.next,
+            32: function() {
+                if (playing) {
+                    this.pause();
+                    playing = false;
+                }
+                else {
+                    this.play(5000);
+                    playing = true;
+                }
+            }
+        });
         
         this.bind(Galleria.LOADSTART, function(e) {
             if (!e.cached) {
