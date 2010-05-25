@@ -1,10 +1,11 @@
 /** Holding variables **/
-
+//Jiggle containers
 var timers = new Array();
 var dir = 0;
+var current_obj;
 
-/** Count-down init **/
-$(function() {
+$(document).ready(function() {
+    /** Count-down init **/
     var lee_date = new Date(2010, 6, 1, 0, 0);
     
     if ((new Date()).getTime() < lee_date) {
@@ -16,24 +17,36 @@ $(function() {
             });
     }
 
-    $('#regImg').mouseover(function() {
-        padd(0);
+    /** Jiggle init **/
+    jiggle('#regImg');
+    
+
+});
+
+function jiggle(selector) {
+    $(selector).mouseover(function() {
+        padd(selector, 0);
     });
-    $('#regImg').mouseout(function() {
+    $(selector).mouseout(function() {
         for (var i=0; i<timers.length; i++) {
+            //Even if we have more jiggles, only one moves at a time.
             clearInterval(timers[i]);
         }
         $(this).removeClass();
         $(this).addClass('padd_3');
     });
-});
 
-function padd(new_dir) {
-    $('#regImg').removeClass();
-    $('#regImg').addClass('padd_' + dir);
+}
+
+function padd(selector, new_dir) {
+    $(selector).removeClass();
+    $(selector).addClass('padd_' + dir);
+
+    //TODO: Find a better way than the use of containers.
+    current_obj = selector;
     dir = new_dir + 1;
     if (dir == 4) {
         dir = 0;
     }
-    timers[timers.length] = window.setTimeout('padd(dir)', 200);
+    timers[timers.length] = window.setTimeout('padd(current_obj, dir)', 200);
 }

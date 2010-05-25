@@ -4,9 +4,6 @@ html {
     background-color: #000;
     color: #FFF;
 }
-a:link, a:visited, a:active {
-    color: #FFF;
-}
 img {
     border: 0;
 }
@@ -19,13 +16,6 @@ hr {
     height: 1px;
     border-width: 0px;
 }
-h1, h2 {
-    text-align: center;
-}
-h3 {
-    display: inline;
-    margin-right: 1em;
-}
 #info h3 {
     margin: 1em 0px 0.2em 0px;
 }
@@ -33,18 +23,22 @@ h3 {
     text-align: center;
     padding-top: 10px;
 }
-.hidden {
-    display: none;
-}
-
 #content {
     margin-top: 5px;
 }
-
+#doc {
+    font-family: 'Droid Sans', arial, serif;
+}
 #countdown {
     position: absolute;
     left: 860px;
     top: 10px;
+    color: #FFF;
+}
+#date {
+    position: absolute;
+    left: 860px;
+    top: 30px;
     color: #FFF;
 }
 
@@ -52,22 +46,28 @@ h3 {
 .center {
     text-align: center;
 }
-
+h1, h2 {
+    text-align: center;
+}
+a:link, a:visited, a:active {
+    color: #FFF;
+}
 .head {
     margin-right: 1em;
     font-weight: bold;
     font-size: 108%;
 }
+.hidden {
+    display: none;
+}
 
-/** Image animation **/
-
+/** Image jiggle **/
 #reg_cont {
     text-align: center;
     margin-left: auto;
 }
-
 #regImg {
-    width: 160;
+    width: 160px;
     height: 70px;
 }
 .padd_0 {
@@ -93,13 +93,13 @@ h3 {
     border-bottom: 1px solid #FFF;
 }
 #menu li {
+    border: 1px solid #FFF;
+    border-bottom: 0px;
     display: inline;
 }
 #menu li a {
     text-decoration: none;
-    border: 1px solid #FFF;
-    border-bottom: 0px;
-    padding: 0.2em 1em 0.1em 1em;
+    padding: 0em 1em;
 }
 #menu li a:hover {
     background-color: #FFF;
