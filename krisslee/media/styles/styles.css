@@ -16,9 +16,6 @@ hr {
     height: 1px;
     border-width: 0px;
 }
-#info h3 {
-    margin: 1em 0px 0.2em 0px;
-}
 #ft {
     text-align: center;
     padding-top: 10px;
@@ -41,6 +38,19 @@ hr {
     top: 30px;
     color: #FFF;
 }
+/** Img size and styling **/
+#regImg {
+    width: 160px;
+    height: 70px;
+}
+#hd img {
+    width: 735px;
+    height: 102px;
+}
+#bookImg {
+    width: 170px;
+    height: 200px;
+}
 
 /** Text styling **/
 .center {
@@ -48,6 +58,9 @@ hr {
 }
 h1, h2 {
     text-align: center;
+}
+#info h3 {
+    margin: 1em 0px 0.2em 0px;
 }
 a:link, a:visited, a:active {
     color: #FFF;
@@ -65,10 +78,6 @@ a:link, a:visited, a:active {
 #reg_cont {
     text-align: center;
     margin-left: auto;
-}
-#regImg {
-    width: 160px;
-    height: 70px;
 }
 .padd_0 {
     padding: 4px 0 3px 2px;
