@@ -44,9 +44,9 @@ Galleria.themes.create({
         );
        
         this.attachKeyboard({
-            left: this.prev, 
-            right: this.next,
-            32: function() {
+            74: this.prev, //j
+            75: this.next, //k
+            32: function() { //space
                 if (playing) {
                     this.pause();
                     playing = false;

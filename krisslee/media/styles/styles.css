@@ -38,6 +38,13 @@ hr {
     top: 30px;
     color: #FFF;
 }
+#ninja {
+    display: none;
+    position: fixed;
+    top: 240px;
+    left: 40px;
+}
+
 /** Img size and styling **/
 #regImg {
     width: 160px;
@@ -50,6 +57,10 @@ hr {
 #bookImg {
     width: 170px;
     height: 200px;
+}
+#ninja img {
+    width: 96px;
+    height: 97px;
 }
 
 /** Text styling **/
