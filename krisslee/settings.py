@@ -13,14 +13,16 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'postgresql_psycopg2'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'lee_dev'             # Or path to database file if using sqlite3.
-DATABASE_USER = 'krisslee'             # Not used with sqlite3.
-DATABASE_PASSWORD = '12kompe12'         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+DATABASES = {
+    'default': {
+        'NAME': 'lee_dev',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'USER': 'krisslee',
+        'PASSWORD': '12kompe12',
+    },
+}
 
-CACHE_BACKED = 'memcached://127.0.0.1:11211/'
+CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -31,9 +33,9 @@ TIME_ZONE = 'Europe/Oslo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'no'
+LANGUAGE_CODE = 'nb'
 
-SITE_ID = 1
+SITE_ID = 2
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -73,6 +75,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'krisslee.urls'
@@ -88,6 +91,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.comments',
     'django.contrib.markup',
-    #'django.contrib.sites',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
     'krisslee.frontpage', #needed?
 )
