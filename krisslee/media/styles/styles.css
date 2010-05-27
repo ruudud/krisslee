@@ -16,6 +16,9 @@ hr {
     height: 1px;
     border-width: 0px;
 }
+#hd {
+    position: relative;
+}
 #ft {
     text-align: center;
     padding-top: 10px;
@@ -28,13 +31,13 @@ hr {
 }
 #countdown {
     position: absolute;
-    left: 860px;
+    left: 600px;
     top: 10px;
     color: #FFF;
 }
 #date {
     position: absolute;
-    left: 860px;
+    left: 650px;
     top: 30px;
     color: #FFF;
 }
