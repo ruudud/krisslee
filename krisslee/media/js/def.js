@@ -19,6 +19,21 @@ $(document).ready(function() {
 
     /** Jiggle init **/
     jiggle('#regImg');
+
+    /** Jukebox init **/
+    if ($('#jukebox').length) {
+        if (!!document.createElement('audio').canPlayType) {
+            $('#jukebox').show();
+            $('#jukebox li').click(function(){
+                $('#jukebox li').removeClass('bold'); 
+                $(this).addClass('bold');
+                play_track($('#jukebox li').index($(this)));
+            });
+        }
+        else {
+            $('#nohtml5').show();
+        }
+    }
 });
 
 function jiggle(selector) {
@@ -48,7 +63,6 @@ function padd(selector, new_dir) {
     }
     timers[timers.length] = window.setTimeout('padd(current_obj, dir)', 200);
 }
-
 (function($) {
 
 	$.fn.konami = function(callback, code) {
@@ -67,3 +81,14 @@ function padd(selector, new_dir) {
 	}
 
 })(jQuery);
+
+/** Audio Player **/
+function play_track(t) {
+    var pl = document.getElementById('player');
+    pl.pause();
+
+    var track = songs[t].source;
+    pl.src = 'http://www.palfashion.no/media/' + track;
+    pl.load();
+    pl.play();
+}
