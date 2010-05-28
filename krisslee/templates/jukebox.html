@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block extrascripts %}
+<script type="text/javascript">
+  var songs = [
+      {
+          'artist': 'Gladlaksene',
+          'title': 'Alene Eremitt',
+          'source': 'Alene_Eremitt.ogg'
+      },
+      {
+          'artist': 'Gladlaksene',
+          'title': 'Legenden om Krabbeøya',
+          'source': 'Legenden_om_Krabbeøya.ogg'
+      }{% comment %},
+      {
+          'artist': 'The Åkseths',
+          'title': 'I\'m a Man',
+          'source': 'Im_a_Man.ogg'
+      }
+      {% endcomment %}
+  
+  ]
+</script>
+{% endblock %}
+{% block content %}
+  <div id="jukebox">
+    <div id="playlist">
+      <ol>
+        <li class="bold">
+          Gladlaksene - Alene Eremitt
+        </li> 
+        <li>
+          Gladlaksene - Legenden Om Krabbeøya
+        </li> 
+        {% comment %}
+        <li>
+          The Åkseths - I'm a Man
+        </li>
+        {% endcomment %}
+      </ol>
+    </div>
+    <audio src="http://www.palfashion.no/media/Alene_Eremitt.ogg" id="player"
+        preload controls class="center" autoplay>
+      Din nettleser støtter ikke HTML5 eller lydkodeket benyttet, last ned
+      <a href="http://www.google.com/chrome/">Google Chrome</a> 
+      eller nyeste versjon av <a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a>.
+    </audio>
+  </div>
+  <div class="hidden">
+      Din nettleser støtter ikke HTML5, last ned
+      {# TODO: Browser icons (from w3schools?) #}
+      <a href="http://www.google.com/chrome/">Google Chrome</a> 
+      eller nyeste versjon av <a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a>.
+  </div>
+{% endblock %}
