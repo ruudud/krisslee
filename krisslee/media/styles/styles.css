@@ -52,6 +52,10 @@ hr {
     text-align: center;
     margin-left: auto;
 }
+#player {
+    text-align: center;
+    margin-left: auto;
+}
 #playlist {
     display: block;
     text-align: left;
