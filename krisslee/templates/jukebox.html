@@ -1,4 +1,8 @@
 {% extends "base.html" %}
+{% block doctype %}
+<!DOCTYPE html>
+<html>
+{% endblock %}
 {% block extrascripts %}
 <script type="text/javascript">
   var songs = [
@@ -11,14 +15,12 @@
           'artist': 'Gladlaksene',
           'title': 'Legenden om Krabbeøya',
           'source': 'Legenden_om_Krabbeøya.ogg'
-      }{% comment %},
+      },
       {
           'artist': 'The Åkseths',
           'title': 'I\'m a Man',
           'source': 'Im_a_Man.ogg'
       }
-      {% endcomment %}
-  
   ]
 </script>
 {% endblock %}
@@ -32,11 +34,9 @@
         <li>
           Gladlaksene - Legenden Om Krabbeøya
         </li> 
-        {% comment %}
         <li>
           The Åkseths - I'm a Man
         </li>
-        {% endcomment %}
       </ol>
     </div>
     <audio src="http://www.palfashion.no/media/Alene_Eremitt.ogg" id="player"
@@ -46,7 +46,7 @@
       eller nyeste versjon av <a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a>.
     </audio>
   </div>
-  <div id="#nohtml5" class="hidden">
+  <div id="nohtml5" class="hidden">
       Din nettleser støtter ikke HTML5, last ned
       {# TODO: Browser icons (from w3schools?) #}
       <a href="http://www.google.com/chrome/">Google Chrome</a> 

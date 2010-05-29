@@ -6,7 +6,7 @@ from django.http import HttpResponseNotAllowed, HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.decorators.cache import cache_page
-
+ 
 @cache_page(604800)
 def front(request):
     images = os.listdir(settings.MEDIA_ROOT + 'pics/')
