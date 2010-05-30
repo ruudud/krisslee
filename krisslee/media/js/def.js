@@ -5,6 +5,14 @@ var dir = 0;
 var current_obj;
 
 $(document).ready(function() {
+    /** Menu **/
+    $('#menu li').mouseover(function(){
+        $(this).children('span').children('a').css({'color': '#000'});
+    });
+    $('#menu li').mouseout(function(){
+        $(this).children('span').children('a').css({'color': '#FFF'});
+    });
+
     /** Count-down init **/
     var lee_date = new Date(2010, 6, 1, 0, 0);
     

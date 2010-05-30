@@ -26,11 +26,31 @@
         <div class="yui-b">
           <div id="menu" class="yui-g"> 
             <ul>
-                <li class="current"><a href="/">Forside</a></li>
-                <li><a href="http://krisslee.blogspot.com/">Blogg</a></li>
-                <li><a href="/registration/">Registrering</a></li>
-                <li><a href="/contact/">Kontakt</a></li>
-                <li><a href="/jukebox/">Jukebox</a></li>
+                <li>
+                  <span class="icon" style="background-image: url('{{ ICON_URL }}house.png')">
+                    <a href="/">Forside</a>
+                  </span>
+                </li>
+                <li>
+                  <span class="icon" style="background-image: url('{{ ICON_URL }}newspaper.png')">
+                    <a href="http://krisslee.blogspot.com/">Blogg</a>
+                  </span>
+                </li>
+                <li>
+                  <span class="icon" style="background-image: url('{{ ICON_URL }}script_add.png')">
+                    <a href="/registration/">Registrering</a>
+                  </span>
+                </li>
+                <li>
+                  <span class="icon" style="background-image: url('{{ ICON_URL }}cd.png')">
+                    <a href="/jukebox/">Jukebox</a>
+                  </span>
+                </li>
+                <li>
+                  <span class="icon" style="background-image: url('{{ ICON_URL }}email.png')">
+                    <a href="/contact/">Kontakt</a>
+                  </span>
+                </li>
             </ul>
           </div> 
           <div id="content" class="yui-g"> 
@@ -49,7 +69,7 @@
           <img id="bookImg" alt="Booking 2010" src="{{ MEDIA_URL }}imgs/booking.png" />
         </a>
         <hr />
-        <h3>Frivillig</h3>
+        <h3><span class="icon" style="background-image: url('{{ ICON_URL }}group_add.png')">Frivillig</span></h3>
         <p>
           Trenger du <b>ekstra</b> god karma?
           En festival rydder ikke seg selv.<br/>
@@ -61,9 +81,8 @@
     <div id="ft">
       <p>
         &copy; Kriss Lee Festivalen 2005-2010<br/>
-        Funksjonalitetsønsker eller designpirk? <a
-        href="mailto:design@krisslee.no">Ta kontakt!</a><br/>
-        <a href="/colophon/">Kolofon</a>
+        <span style="background-image: url('{{ ICON_URL }}email.png')" class="icon"><a href="/contact/">Nettsideansvarlig</a></span><br/>
+        <span style="background-image: url('{{ ICON_URL }}layout.png')" class="icon"><a href="/colophon/">Kolofon</a></span>
       </p>
     </div> 
   </div> 
