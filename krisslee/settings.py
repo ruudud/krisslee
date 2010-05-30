@@ -50,6 +50,8 @@ MEDIA_ROOT = PROJECT_ROOT + '/media/'
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
+ICON_URL = MEDIA_URL + 'icons/'
+
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
@@ -62,7 +64,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
-    "django.core.context_processors.media")
+    "django.core.context_processors.media",
+    "krisslee.util.context_processors.icon",
+)
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -76,12 +80,13 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'krisslee.urls'
 
 TEMPLATE_DIRS = (
-    PROJECT_ROOT + "/templates/",
+    PROJECT_ROOT + '/templates/',
 )
 
 INSTALLED_APPS = (
@@ -93,5 +98,6 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'krisslee.frontpage', #needed?
+    'krisslee.frontpage', 
+    'debug_toolbar',
 )
