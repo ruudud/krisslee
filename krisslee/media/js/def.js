@@ -6,6 +6,9 @@ var current_obj;
 
 $(document).ready(function() {
     /** Menu **/
+    $('#menu li').click(function(){
+        location.href = $(this).children('span').children('a').attr('href');
+    });
     $('#menu li').mouseover(function(){
         $(this).children('span').children('a').css({'color': '#000'});
     });
