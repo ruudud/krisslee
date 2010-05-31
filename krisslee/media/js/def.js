@@ -35,14 +35,24 @@ $(document).ready(function() {
             $('#jukebox li').click(function(){
                 $('#jukebox li').removeClass('bold'); 
                 $(this).addClass('bold');
-                play_track($('#jukebox li').index($(this)));
+                var id = $('#jukebox li').index($(this));
+                play_track(id);
+                update_playing(id);
             });
+            update_playing(0);
         }
         else {
             $('#nohtml5').show();
         }
     }
 });
+
+function update_playing(t) {
+    $('#track_artist').html(songs[t].artist);
+    $('#track_title').html(songs[t].title);
+    $('#track_info').html(songs[t].info);
+    $('#cover').css('background-image', 'url("' + songs[t].image + '")');
+}
 
 function jiggle(selector) {
     $(selector).mouseover(function() {

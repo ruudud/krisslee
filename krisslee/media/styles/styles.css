@@ -66,6 +66,37 @@ hr {
     text-align: center;
     margin-left: auto;
 }
+#now_playing {
+    position: relative;
+    float: left;
+    width: 98%;
+    border: 1px solid #CCC;
+    padding: 2px;
+    margin-left: auto;
+    text-align: center;
+}
+#track_info {
+    text-align: left;
+}
+#cover {
+    background-repeat: no-repeat;
+    width: 226px;
+    height: 174px;
+}
+#track {
+    width: 226px;
+    height: 34px;
+    margin-top: 140px;
+    background-color: #000;
+    border-top: 1px solid #000;
+    /* IE */
+    filter:alpha(opacity=60);
+    /* CSS3 */
+    opacity:0.6;
+}
+#track_artist {
+    font-weight: bold;
+}
 #player {
     text-align: center;
     margin-left: auto;
@@ -103,6 +134,9 @@ hr {
 }
 .black {
     color: #000;
+}
+.grey {
+    color: #CCC;
 }
 .bold {
     font-weight: bold;
@@ -156,7 +190,6 @@ a:link, a:visited, a:active {
     border-bottom: 1px solid #FFF;
 }
 #menu li {
-    border: 1px solid #FFF;
     margin-left: 3px;
     padding: 4px 0px 1px 2px;
     border-bottom: 0px;

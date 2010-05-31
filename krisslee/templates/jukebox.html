@@ -9,19 +9,44 @@
       {
           'artist': 'Gladlaksene',
           'title': 'Alene Eremitt',
-          'source': 'Alene_Eremitt.ogg'
+          'source': 'Alene_Eremitt.ogg',
+          'image': '/media/jukebox/gladlaksene.jpg',
+          'info': 'Gladlaksene er Mandals mest lokale lokalband. Når man bor i\
+                   Norges fineste sørlandsperle som har så flott sjøkultur er\
+                   det lett å finne inspirasjon. Bandet spiller blues og\
+                   folkeviser om livet rundt og i sjøen, ofte med en solid\
+                   dose lokalromantikk. Sanger skrives og fremføres selvsagt\
+                   på ekte Mandals-dialekt. Sånn ellers er Gladlaksene\
+                   selvsagt miljøbevisste og tar avstand fra overfiske og\
+                   fråtseri slik som den årlige Skalldyrfestival.<br/>\
+                   - <a href="www.nrk.no/urort/Artist/Gladlaksene/">Urørt</a>'
       },
       {
           'artist': 'Gladlaksene',
           'title': 'Legenden om Krabbeøya',
-          'source': 'Legenden_om_Krabbeøya.ogg'
+          'source': 'Legenden_om_Krabbeøya.ogg',
+          'image': '/media/jukebox/gladlaksene.jpg',
+          'info': 'Gladlaksene er Mandals mest lokale lokalband. Når man bor i\
+                   Norges fineste sørlandsperle som har så flott sjøkultur er\
+                   det lett å finne inspirasjon. Bandet spiller blues og\
+                   folkeviser om livet rundt og i sjøen, ofte med en solid\
+                   dose lokalromantikk. Sanger skrives og fremføres selvsagt\
+                   på ekte Mandals-dialekt. Sånn ellers er Gladlaksene\
+                   selvsagt miljøbevisste og tar avstand fra overfiske og\
+                   fråtseri slik som den årlige Skalldyrfestival.<br/>\
+                   - <a href="www.nrk.no/urort/Artist/Gladlaksene/">Urørt</a>'
       },
       {
           'artist': 'The Åkseths',
           'title': 'I\'m a Man',
-          'source': 'Im_a_Man.ogg'
+          'source': 'Im_a_Man.ogg',
+          'image': '/media/jukebox/theaakseths.jpg',
+          'info': 'Låter som: cream to your ears<br/>Medlemmer: Hallvar\
+                   Nilsen, Endre Bruskeland, Telly Whimston<br/>Forbilder:\
+                   God<br/>- <a href="http://www.myspace.com/theaaksets">\
+                   MySpace</a>' 
       }
-  ]
+  ];
 </script>
 {% endblock %}
 {% block content %}
@@ -39,8 +64,14 @@
         </li>
       </ol>
     </div>
+    <div id="now_playing" class="yui-g">
+      <div id="track_info" class="yui-u first"></div>
+      <div id="cover" class="yui-u">
+        <div id="track"><span id="track_artist"></span><br/><span id="track_title"></span></div>
+      </div>
+    </div>
     <audio src="http://www.palfashion.no/media/Alene_Eremitt.ogg" id="player"
-        preload controls autoplay>
+        preload controls>
       Din nettleser støtter ikke HTML5 eller lydkodeket benyttet, last ned
       <a href="http://www.google.com/chrome/">Google Chrome</a> 
       eller nyeste versjon av 
