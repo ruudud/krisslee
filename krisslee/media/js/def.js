@@ -31,6 +31,11 @@ $(document).ready(function() {
     /** Jiggle init **/
     jiggle('#regImg');
 
+    /** Important text **/
+    if ($('#important').length) {
+        window.setTimeout('important()', 6000);
+    }
+
     /** Jukebox init **/
     if ($('#jukebox').length) {
         if (!!document.createElement('audio').canPlayType) {
@@ -51,6 +56,16 @@ $(document).ready(function() {
         }
     }
 });
+
+function important() {
+    $('#showhelp').click(function() {
+        $('#showhelp').hide();
+        $('#important').show();
+    });
+    $('#important').fadeOut(600);
+    window.setTimeout('$(\'#showhelp\').show()', 1000);
+    ;
+}
 
 function jiggle(selector) {
     $(selector).mouseover(function() {
