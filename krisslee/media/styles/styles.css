@@ -78,12 +78,15 @@ hr {
 #track_info {
     text-align: left;
 }
+#track_artist {
+    font-weight: bold;
+}
 #cover {
     background-repeat: no-repeat;
     width: 226px;
     height: 174px;
 }
-#track {
+#cover_overlay {
     width: 226px;
     height: 34px;
     margin-top: 140px;
@@ -93,13 +96,6 @@ hr {
     filter:alpha(opacity=60);
     /* CSS3 */
     opacity:0.6;
-}
-#track_artist {
-    font-weight: bold;
-}
-#player {
-    text-align: center;
-    margin-left: auto;
 }
 #playlist {
     display: block;
