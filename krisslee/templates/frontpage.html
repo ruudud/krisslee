@@ -6,6 +6,12 @@
     $(document).ready(function() {
       Galleria.loadTheme('{{ MEDIA_URL }}js/themes/classic/galleria.classic.js');
       $(document).konami(function(){
+        var ctop = 10 * Math.floor(Math.random()*21);
+        alert(ctop + 'px');
+        var cleft = 10 * Math.floor(Math.random()*21);
+        alert(cleft + 'px');
+        $('#ninja').css('top', ctop + 'px');
+        $('#ninja').css('left', cleft + 'px');
         $('#ninja').show();
         window.setTimeout('$(\'#ninja\').fadeOut(600)', 3000);
       });
@@ -35,8 +41,18 @@
       {% endfor %}
     </ul>
   {% endif %}
+  <span id="showhelp">Vis hjelpetekst</span>
   <div id="ninja">
     <img src="{{ MEDIA_URL }}imgs/ninja.gif" alt="Ninja!" />
   </div>
-  
+  <div id="important">
+    <p class="imp_text">
+      <span class="bold icon icon_pad" style="background-image: url('{{ ICON_URL }}information.png')">
+        Gallerihjelp:
+      </span>
+      Hold musepekeren over galleriet for å pause avspillingen.
+      Trykk <strong>j</strong> og <strong>k</strong> for å gå tilbake og fram i
+      galleriet.
+    </p>
+  </div>
 {% endblock %}

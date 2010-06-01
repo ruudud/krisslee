@@ -59,6 +59,27 @@ hr {
     top: 240px;
     left: 40px;
 }
+#showhelp {
+    display: none;
+    cursor: pointer;
+}
+#important {
+    padding: 5px 5px 0px 5px;
+    text-align: center;
+    margin-left: 70px;
+    width: 70%;
+    border: 1px solid #FFF;
+    /* blå background-color: #98C8F6; */
+    background-color: #FFD451;
+}
+.icon_pad {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.imp_text {
+    text-align: left;
+    color: #000;
+}
 
 /** Jukebox styling **/
 #jukebox {
@@ -117,7 +138,7 @@ hr {
 }
 #bookImg {
     width: 170px;
-    height: 250px;
+    height: 300px;
 }
 #ninja img {
     width: 96px;
