@@ -42,6 +42,8 @@ $(document).ready(function() {
                 play_track(id);
                 update_playing(id);
             });
+
+            play_track(0);
             update_playing(0);
         }
         else {
@@ -49,13 +51,6 @@ $(document).ready(function() {
         }
     }
 });
-
-function update_playing(t) {
-    $('#track_artist').html(songs[t].artist);
-    $('#track_title').html(songs[t].title);
-    $('#track_info').html(songs[t].info);
-    $('#cover').css('background-image', 'url("' + songs[t].image + '")');
-}
 
 function jiggle(selector) {
     $(selector).mouseover(function() {
@@ -103,13 +98,53 @@ function padd(selector, new_dir) {
 
 })(jQuery);
 
-/** Audio Player **/
-function play_track(t) {
-    var pl = document.getElementById('player');
-    pl.pause();
+/** Media Player **/
+function update_playing(t) {
+    var file = songs[t];
 
-    var track = songs[t].source;
-    pl.src = 'http://www.palfashion.no/media/' + track;
+    if (file.video) {
+        $('#now_playing').hide();
+        //$('#poster').attr('src', file.image);
+        //$('#poster').attr('alt', file.artist + ' - ' + file.title);
+    }
+    else {
+        $('#now_playing').show();
+        $('#track_artist').html(file.artist);
+        $('#track_title').html(file.title);
+        $('#track_info').html(file.info);
+        $('#cover').css('background-image', 'url("' + file.image + '")');
+    }
+}
+
+function play_track(t) {
+    var apl = document.getElementById('aud_player');
+    var vpl = document.getElementById('vid_player');
+    var acont = $('#aud_cont');
+    var vcont = $('#vid_cont');
+    
+    var file = songs[t];
+    var pl;
+
+    if (file.video) {
+        apl.pause();
+        acont.hide(); 
+        
+        vcont.show(); 
+        pl = vpl;
+    
+        //$('#vid_ogv').attr('src', 'http://www.palfashion.no/media/' + file.ogv);
+        //$('#vid_mp4').attr('src', 'http://www.palfashion.no/media/' + file.mp4);
+    }
+    else {
+        vpl.pause();
+        vcont.hide(); 
+
+        acont.show(); 
+        pl = apl;
+
+        pl.src = 'http://www.palfashion.no/media/' + file.source;
+    }
+
     pl.load();
     pl.play();
 }
