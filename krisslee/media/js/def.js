@@ -5,7 +5,7 @@ var dir = 0;
 var current_obj;
 
 $(document).ready(function() {
-    /** Menu **/
+    /** Menu init **/
     $('#menu li').click(function(){
         location.href = $(this).children('span').children('a').attr('href');
     });
@@ -116,18 +116,27 @@ function padd(selector, new_dir) {
 /** Media Player **/
 function update_playing(t) {
     var file = songs[t];
+    var cover = $('#cover');
+    var t_info = $('#track_info');
+
+    t_info.html(file.info);
 
     if (file.video) {
-        $('#now_playing').hide();
+        t_info.css('width', '40%');
+        cover.hide();
+        
+        t_info.prepend('<strong>' + file.artist + ' - ' + file.title + '</strong><br/>'); 
+        //$('#now_playing').hide();
         //$('#poster').attr('src', file.image);
         //$('#poster').attr('alt', file.artist + ' - ' + file.title);
     }
     else {
-        $('#now_playing').show();
+        t_info.css('width', '50%');
+        cover.hide();
         $('#track_artist').html(file.artist);
         $('#track_title').html(file.title);
-        $('#track_info').html(file.info);
         $('#cover').css('background-image', 'url("' + file.image + '")');
+        cover.show();
     }
 }
 
