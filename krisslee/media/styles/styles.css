@@ -28,7 +28,7 @@ hr {
     padding-top: 10px;
 }
 #content {
-    margin-top: 5px;
+    margin-top: 1em;
 }
 #doc {
     font-family: 'Droid Sans', arial, serif;
@@ -92,6 +92,7 @@ hr {
     position: relative;
     float: left;
     width: 98%;
+    height: 256px;
     padding: 2px;
     margin-left: auto;
     text-align: center;
@@ -99,8 +100,12 @@ hr {
 #track_info {
     text-align: left;
     background-color: #FFD451;
-    color: #000;
     width: 50%;
+    height: 100%;
+}
+.info_text {
+    padding: 4px;
+    color: #000;
 }
 #track_info a {
     color: #000;
@@ -110,14 +115,16 @@ hr {
 }
 #cover {
     background-repeat: no-repeat;
-    width: 226px;
-    height: 174px;
+    background-color: #FFD451;
+    background-position: top right;
+    height: 256px;
     width: 50%;
 }
 #cover_overlay {
     width: 226px;
     height: 34px;
     margin-top: 140px;
+    margin-left: 46px;
     text-align: center;
     background-color: #000;
     border-top: 1px solid #000;
@@ -129,10 +136,31 @@ hr {
 #playlist {
     display: block;
     text-align: left;
+    margin-left: 20px;
 }
 #playlist li:hover {
     text-decoration: underline;    
     cursor: pointer;
+}
+#playlist ol {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 1em;
+    width: 55%;
+}
+#playlist li {
+    border-bottom: 1px solid #FFF;
+    background-repeat: no-repeat;
+    background-position: 0px; 
+    padding: 2px 0px 2px 18px;
+}
+.video {
+    background-image: url('/media/icons/film.png');
+}
+
+.audio {
+    background-image: url('/media/icons/music.png');
 }
 
 /** Img size and styling **/

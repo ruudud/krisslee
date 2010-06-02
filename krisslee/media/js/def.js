@@ -119,13 +119,13 @@ function update_playing(t) {
     var cover = $('#cover');
     var t_info = $('#track_info');
 
-    t_info.html(file.info);
+    t_info.children('p').html(file.info);
 
     if (file.video) {
         t_info.css('width', '40%');
         cover.hide();
         
-        t_info.prepend('<strong>' + file.artist + ' - ' + file.title + '</strong><br/>'); 
+        t_info.children('p').prepend('<strong>' + file.artist + ' - ' + file.title + '</strong><br/>'); 
         //$('#now_playing').hide();
         //$('#poster').attr('src', file.image);
         //$('#poster').attr('alt', file.artist + ' - ' + file.title);

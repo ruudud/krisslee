@@ -66,23 +66,24 @@
 {% block content %}
   <div id="jukebox">
     <div id="playlist">
+      <span class="head">Spilleliste:</span>
       <ol>
-        <li class="bold">
-          Gladlaksene - Havets Saft (video)
+        <li class="bold video">
+          Gladlaksene - Havets Saft
         </li> 
-        <li>
+        <li class="audio">
           Gladlaksene - Alene Eremitt
         </li> 
-        <li>
+        <li class="audio">
           Gladlaksene - Legenden Om Krabbeøya
         </li> 
-        <li>
+        <li class="audio">
           The Åkseths - I'm a Man
         </li>
       </ol>
     </div>
     <div id="now_playing" class="yui-g">
-      <div id="track_info" class="yui-u first"></div>
+      <div id="track_info" class="yui-u first"><p class="info_text"></p></div>
       <div id="cover" class="yui-u">
         <div id="cover_overlay">
           <span id="track_artist"></span><br/>
