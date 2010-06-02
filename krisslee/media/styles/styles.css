@@ -61,6 +61,10 @@ hr {
 }
 #showhelp {
     display: none;
+    background-image: url('/media/icons/information.png');
+    background-repeat: no-repeat;
+    text-decoration: underline;
+    padding: 2px 18px;
     cursor: pointer;
     color: #CCC;
 }
@@ -70,7 +74,6 @@ hr {
     margin-left: 70px;
     width: 70%;
     border: 1px solid #CCC;
-    /* blå background-color: #98C8F6; */
     background-color: #FFD451;
 }
 .icon_pad {
@@ -94,6 +97,11 @@ hr {
     width: 98%;
     height: 256px;
     padding: 2px;
+    margin-left: auto;
+    text-align: center;
+}
+#aud_player {
+    width: 98%;
     margin-left: auto;
     text-align: center;
 }
