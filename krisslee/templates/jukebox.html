@@ -8,12 +8,14 @@
   var songs = [
       {
           'artist': 'Gladlaksene',
-          'title': 'Havets_Saft',
+          'title': 'Havets Saft',
           'video': true,
           'ogv': 'Havets_Saft.ogv',
           'mp4': 'Havets_Saft.mp4',
           'image': '/media/jukebox/gladlaksene.jpg',
-          'info': 'Kriss Lee 09 &copy; Fuafilm'
+          'info': 'Filmet under Kriss Lee 09 av Fuafilm.<br/>\
+                   Dette kan sees på som en teaser til en film som vil bli\
+                   laget «en gang».'
       },
       {
           'artist': 'Gladlaksene',
@@ -87,16 +89,16 @@
           <span id="track_title"></span>
         </div>
       </div>
+      <div id="vid_cont" class="hidden">
+        <video id="vid_player" width="320" height="256" preload controls>
+          <source id="vid_mp4" src="http://www.palfashion.no/media/Havets_Saft.mp4" type='video/mp4; codecs="vc1.42E01E, mp4a.40.2"' />
+          <source id="vid_ogv" src="http://www.palfashion.no/media/Havets_Saft.ogv" type='video/ogg; codecs="theora, vorbis"' />
+          <img src="/media/jukebox/gladlaksene.jpg" alt="Gladlaksene - Havets Saft" width="226" height="174" id="poster" />
+        </video>
+      </div>
     </div>
     <div id="aud_cont" class="hidden">
       <audio src="" id="aud_player" preload controls></audio>
-    </div>
-    <div id="vid_cont" class="hidden">
-      <video id="vid_player" width="320" height="256" preload controls>
-        <source id="vid_mp4" src="http://www.palfashion.no/media/Havets_Saft.mp4" type='video/mp4; codecs="vc1.42E01E, mp4a.40.2"' />
-        <source id="vid_ogv" src="http://www.palfashion.no/media/Havets_Saft.ogv" type='video/ogg; codecs="theora, vorbis"' />
-        <img src="/media/jukebox/gladlaksene.jpg" alt="Gladlaksene - Havets Saft" width="226" height="174" id="poster" />
-      </video>
     </div>
   </div>
   <div id="nohtml5" class="hidden">
