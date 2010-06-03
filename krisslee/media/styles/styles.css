@@ -20,6 +20,14 @@ hr {
     height: 1px;
     border-width: 0px;
 }
+#doc {
+    position: relative;
+}
+#external {
+    position: absolute;
+    top: 140px; 
+    left: -55px;
+}
 #hd {
     position: relative;
 }
@@ -66,6 +74,9 @@ hr {
     text-decoration: underline;
     padding: 2px 18px;
     cursor: pointer;
+    color: #FFF;
+}
+#showhelp:hover {
     color: #CCC;
 }
 #important {
@@ -180,6 +191,10 @@ hr {
     width: 735px;
     height: 102px;
 }
+#external img {
+    height: 50px;
+    width: 50px;
+}
 #bookImg {
     width: 170px;
     height: 300px;
@@ -213,6 +228,9 @@ h3 {
 }
 a:link, a:visited, a:active {
     color: #FFF;
+}
+a:hover {
+    color: #CCC;
 }
 .head {
     margin-right: 1em;
@@ -248,13 +266,16 @@ a:link, a:visited, a:active {
     margin: 0;
     margin-top: 7px;
     text-align: center;
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid #AAA;
 }
 #menu li {
     margin-left: 3px;
     padding: 4px 0px 1px 2px;
     border-bottom: 0px;
     display: inline;
+    color: #FFF;
+}
+#menu li a {
     color: #FFF;
 }
 #menu li:hover {
