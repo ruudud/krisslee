@@ -37,6 +37,7 @@ hr {
 }
 #content {
     margin-top: 1em;
+    padding: 0px 5px;
 }
 #doc {
     font-family: 'Droid Sans', arial, serif;

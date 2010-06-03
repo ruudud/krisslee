@@ -22,6 +22,12 @@
     });
   </script>
 {% endblock %}
+{% block externals %}
+  {{ block.super }}
+  <a href="http://www.yr.no/stad/Noreg/Vest-Agder/Mandal/Mandal/">
+    <img src="{{ ICON_URL }}yr/{{ yr_symbol }}.png" title="Været i Mandal nå: {{ yr_desc }}" alt="{{ yr_desc }}" />
+  </a>
+{% endblock %}
 {% block content %}
   <p>
     <span class="head">Hei, og velkommen.</span>
