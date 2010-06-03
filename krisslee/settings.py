@@ -50,7 +50,9 @@ MEDIA_ROOT = PROJECT_ROOT + '/media/'
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
+# NEW VARS
 ICON_URL = MEDIA_URL + 'icons/'
+YR_XML = PROJECT_ROOT + '/frontpage/varsel.xml'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
