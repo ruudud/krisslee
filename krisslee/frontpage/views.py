@@ -19,14 +19,17 @@ def front(request):
     yr_data = cache.get('yr_data')
     if not yr_data:
         yr_data = {}
-        w_file = open(settings.CURRENT_WEATHER, 'r')
-        w = w_file.readline().split(';')
-        w_file.close()
-        if w[0] != 'error':
-            yr_data['symbol'] = w[0]
-            yr_data['desc'] = w[1]
-            yr_data['temp'] = w[2]
-            cache.set('yr_data', yr_data, 1800)
+        try:
+            w_file = open(settings.CURRENT_WEATHER, 'r')
+            w = w_file.readline().split(';')
+            w_file.close()
+            if w[0] != 'error':
+                yr_data['symbol'] = w[0]
+                yr_data['desc'] = w[1]
+                yr_data['temp'] = w[2]
+                cache.set('yr_data', yr_data, 1800)
+        except:
+            pass
 
     return render_to_response('frontpage.html', 
         {
