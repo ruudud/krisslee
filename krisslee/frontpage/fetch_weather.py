@@ -8,7 +8,7 @@ from datetime import datetime, time
 
 SCRIPT_ROOT = os.path.dirname(os.path.abspath(__file__))
 YR_XML = SCRIPT_ROOT + '/varsel.xml'
-CURRENT_WEATHER = SCRIPT_ROOT + '/current_weather.xml'
+CURRENT_WEATHER = SCRIPT_ROOT + '/current_weather.py'
 
 doc = xml.dom.minidom.parse(YR_XML)
 tabular = doc.getElementsByTagName('tabular')
