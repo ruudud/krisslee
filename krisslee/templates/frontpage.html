@@ -24,10 +24,11 @@
 {% endblock %}
 {% block externals %}
   {{ block.super }}
-  {% if yr_symbol %}
+  {% if yr_data %}
     <a href="http://www.yr.no/sted/Norge/Vest-Agder/Mandal/Mandal/">
-      <img src="{{ ICON_URL }}yr/{{ yr_symbol }}.png" title="Været i Mandal nå: {{ yr_desc }}" alt="{{ yr_desc }}" />
-    </a>
+      <img src="{{ ICON_URL }}yr/{{ yr_data.symbol }}.png" title="Været i Mandal nå: {{ yr_data.desc }}" alt="{{ yr_data.desc }}" />
+    </a><br/>
+    <p class="small center">{{ yr_data.temp }}°C</p>
   {% endif %}
 {% endblock %}
 {% block content %}

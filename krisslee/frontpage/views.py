@@ -1,32 +1,36 @@
 #encoding: utf-8
 import os
 
+from django.core.cache import cache
 from django.conf import settings
 from django.http import HttpResponseNotAllowed, HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.views.decorators.cache import cache_page
  
-#cache for half a day
-@cache_page(43200)
 def front(request):
-    images = os.listdir(settings.MEDIA_ROOT + 'pics/')
-    pictures = [f for f in images if f[-3:] == 'jpg']
+    pictures = cache.get('pictures')
+    if not pictures:
+        #TODO: DB-model for this
+        images = os.listdir(settings.MEDIA_ROOT + 'pics/')
+        pictures = [f for f in images if f[-3:] == 'jpg']
+        if pictures:
+            cache.set('pictures', pictures, 86400)
     
-    #TODO: Find more efficient way of doing this
-    w_file = open(settings.CURRENT_WEATHER, 'r')
-    w = w_file.readline().split(';')
-    w_file.close()
-    symbol = None
-    desc = None
-    if w[0] != 'error':
-        symbol = w[0]
-        desc = w[1]
+    yr_data = cache.get('yr_data')
+    if not yr_data:
+        yr_data = {}
+        w_file = open(settings.CURRENT_WEATHER, 'r')
+        w = w_file.readline().split(';')
+        w_file.close()
+        if w[0] != 'error':
+            yr_data['symbol'] = w[0]
+            yr_data['desc'] = w[1]
+            yr_data['temp'] = w[2]
+            cache.set('yr_data', yr_data, 1800)
 
     return render_to_response('frontpage.html', 
         {
             'pictures': pictures, 
-            'yr_symbol': symbol,
-            'yr_desc': desc,
+            'yr_data': yr_data,
         }, 
         context_instance=RequestContext(request))

@@ -218,6 +218,9 @@ hr {
 .bold {
     font-weight: bold;
 }
+.small {
+    font-size: 60%;
+}
 h1, h2 {
     text-align: center;
 }
