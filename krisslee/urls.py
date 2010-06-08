@@ -21,6 +21,9 @@ urlpatterns = patterns('',
     (r'^jukebox/', 'django.views.generic.simple.direct_to_template', {
             'template': 'jukebox.html', 
         }),
+    (r'^joern.jpg', 'django.view.generic.simple.redirect_to', {
+            'url': '/',
+        }),
 )
 #Hack to get testserver to serve media
 if settings.DEBUG:
