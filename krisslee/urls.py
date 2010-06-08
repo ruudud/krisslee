@@ -21,7 +21,7 @@ urlpatterns = patterns('',
     (r'^jukebox/', 'django.views.generic.simple.direct_to_template', {
             'template': 'jukebox.html', 
         }),
-    (r'^joern.jpg', 'django.view.generic.simple.redirect_to', {
+    (r'^joern\.jpg', 'django.views.generic.simple.redirect_to', {
             'url': '/',
         }),
 )
