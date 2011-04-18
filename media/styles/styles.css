@@ -28,6 +28,9 @@ hr {
     top: 140px; 
     left: -55px;
 }
+#external a {
+    text-decoration: none;
+}
 #hd {
     position: relative;
 }
