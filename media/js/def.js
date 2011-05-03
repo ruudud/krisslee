@@ -155,9 +155,6 @@ function play_track(t) {
         
         vcont.show(); 
         pl = vpl;
-    
-        //$('#vid_ogv').attr('src', 'http://www.palfashion.no/media/' + file.ogv);
-        //$('#vid_mp4').attr('src', 'http://www.palfashion.no/media/' + file.mp4);
     }
     else {
         vpl.pause();
