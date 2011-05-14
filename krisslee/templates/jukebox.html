@@ -13,10 +13,10 @@
           'video': true,
           'ogv': 'Havets_Saft.ogv',
           'mp4': 'Havets_Saft.mp4',
-          'image': MEDIA_URL + '/media/jukebox/gladlaksene.jpg',
+          'image': '{{ MEDIA_URL }}jukebox/gladlaksene.jpg',
           'info': 'Filmet under Kriss Lee 09 av Fuafilm.<br/>\
                    Dette kan sees på som en teaser til en film som vil bli\
-                   laget «en gang».<br/><a href="http://www.palfashion.no/media/Havets_Saft_hq.mp4">\
+                   laget «en gang».<br/><a href="{{ MEDIA_URL }}Havets_Saft_hq.mp4">\
                    Trykk her</a> for å laste ned videoen i bedre oppløsning.'
       },
       {
@@ -24,7 +24,7 @@
           'title': 'Alene Eremitt',
           'source': 'Alene_Eremitt.ogg',
           'video': false,
-          'image': MEDIA_URL + '/media/jukebox/gladlaksene.jpg',
+          'image': '{{ MEDIA_URL }}jukebox/gladlaksene.jpg',
           'info': 'Gladlaksene er Mandals mest lokale lokalband. Når man bor i\
                    Norges fineste sørlandsperle som har så flott sjøkultur er\
                    det lett å finne inspirasjon. Bandet spiller blues og\
@@ -40,7 +40,7 @@
           'title': 'Legenden om Krabbeøya',
           'source': 'Legenden_om_Krabbeøya.ogg',
           'video': false,
-          'image': MEDIA_URL + '/media/jukebox/gladlaksene.jpg',
+          'image': '{{ MEDIA_URL }}jukebox/gladlaksene.jpg',
           'info': 'Gladlaksene er Mandals mest lokale lokalband. Når man bor i\
                    Norges fineste sørlandsperle som har så flott sjøkultur er\
                    det lett å finne inspirasjon. Bandet spiller blues og\
@@ -56,7 +56,7 @@
           'title': 'I\'m a Man',
           'source': 'Im_a_Man.ogg',
           'video': false,
-          'image': MEDIA_URL + '/media/jukebox/theaakseths.jpg',
+          'image': '{{ MEDIA_URL }}jukebox/theaaksets.jpg',
           'info': 'Låter som: Cream to your ears.<br/>Medlemmer: Hallvar\
                    Nilsen, Endre Bruskeland, Telly Whimston<br/>Forbilder:\
                    God<br/>- <a href="http://www.myspace.com/theaaksets">\
@@ -67,7 +67,7 @@
           'title': 'Snuten Kommer',
           'source': 'Snuten_Kommer.ogg',
           'video': false,
-          'image': MEDIA_URL + '/media/jukebox/slakternilsen.jpg',
+          'image': '{{ MEDIA_URL }}jukebox/slakternilsen.jpg',
           'info': 'Låter som: Byggeplass.<br/>Medlemmer: Kristoffer Garmann,\
                     Gasen Steinsland, Hallvar Nilsen, Torbjørn Schimdt.<br/>\
                    Plateselskap: Woodsving inc.<br/>- <a href="http://www.myspace.com/slakternilsen">MySpace</a>'
@@ -77,7 +77,7 @@
           'title': 'Slakter Nilsen',
           'source': 'Slakter_Nilsen.ogg',
           'video': false,
-          'image': MEDIA_URL + '/media/jukebox/slakternilsen.jpg',
+          'image': '{{ MEDIA_URL }}jukebox/slakternilsen.jpg',
           'info': 'Låter som: Byggeplass.<br/>Medlemmer: Kristoffer Garmann,\
                     Gasen Steinsland, Hallvar Nilsen, Torbjørn Schimdt.<br/>\
                    Plateselskap: Woodsving inc.<br/>- <a href="http://www.myspace.com/slakternilsen">MySpace</a>'
@@ -120,9 +120,9 @@
       </div>
       <div id="vid_cont" class="hidden">
         <video id="vid_player" width="320" height="256" preload controls>
-          <source id="vid_mp4" src="http://www.palfashion.no/media/Havets_Saft.mp4" type='video/mp4; codecs="vc1.42E01E, mp4a.40.2"' />
-          <source id="vid_ogv" src="http://www.palfashion.no/media/Havets_Saft.ogv" type='video/ogg; codecs="theora, vorbis"' />
-          <img src="/media/jukebox/gladlaksene.jpg" alt="Gladlaksene - Havets Saft" width="226" height="174" id="poster" />
+          <source id="vid_mp4" src="{{ MEDIA_URL }}Havets_Saft.mp4" type='video/mp4; codecs="vc1.42E01E, mp4a.40.2"' />
+          <source id="vid_ogv" src="{{ MEDIA_URL }}Havets_Saft.ogv" type='video/ogg; codecs="theora, vorbis"' />
+          <img src="{{ MEDIA_URL }}/jukebox/gladlaksene.jpg" alt="Gladlaksene - Havets Saft" width="226" height="174" id="poster" />
         </video>
       </div>
     </div>
@@ -141,22 +141,22 @@
     </p>
     <ul>
       <li>
-        <a href="http://www.palfashion.no/media/Havets_Saft.ogv">
+        <a href="{{ MEDIA_URL }}Havets_Saft.ogv">
           Gladlaksene - Havets Saft (video)
         </a>
       </li> 
       <li>
-        <a href="http://www.palfashion.no/media/Alene_Eremitt.ogg">
+        <a href="{{ MEDIA_URL }}Alene_Eremitt.ogg">
           Gladlaksene - Alene Eremitt
         </a>
       </li> 
       <li>
-        <a href="http://www.palfashion.no/media/Legenden_om_Krabbeøya.ogg">
+        <a href="{{ MEDIA_URL }}Legenden_om_Krabbeøya.ogg">
           Gladlaksene - Legenden Om Krabbeøya
         </a>
       </li> 
       <li>
-        <a href="http://www.palfashion.no/media/Im_a_Man.ogg">
+        <a href="{{ MEDIA_URL }}Im_a_Man.ogg">
           The Åkseths - I'm a Man
         </a>
       </li>
