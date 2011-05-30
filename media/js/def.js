@@ -17,7 +17,7 @@ $(document).ready(function() {
     });
 
     /** Count-down init **/
-    var lee_date = new Date(2011, 7, 1, 18);
+    var lee_date = new Date(2011, 7-1, 1, 18);
     
     if ((new Date()).getTime() < lee_date) {
         $('#countdown').countdown({
