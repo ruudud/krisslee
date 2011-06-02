@@ -6,6 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^$', 'krisslee.frontpage.views.front'),
+    (r'^mu-19d7f2ba-f8bd13fd-67850799-bc8eff2c$', 'krisslee.frontpage.views.blitz'),
     (r'^admin/', include(admin.site.urls)),
     (r'^jukebox/', 'django.views.generic.simple.direct_to_template', {
             'template': 'jukebox.html', 
