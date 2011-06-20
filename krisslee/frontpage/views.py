@@ -7,9 +7,6 @@ from django.http import HttpResponseNotAllowed, HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
  
-def blitz(request):
-    return HttpResponse('42', mimetype="text/plain")
-
 def front(request):
     pictures = cache.get('pictures')
     if not pictures:
