@@ -14,7 +14,7 @@ def front(request):
     pictures = cache.get('pictures')
     if not pictures:
         #TODO: DB-model for this
-        images = os.listdir(settings.MEDIA_ROOT + 'pics/')
+        images = [] #os.listdir(settings.MEDIA_ROOT + 'pics/')
         pictures = [f for f in images if f[-3:] == 'jpg']
         if pictures:
             cache.set('pictures', pictures, 86400)

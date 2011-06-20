@@ -1,6 +1,6 @@
 {% block doctype %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 {% endblock %}
 <head>
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
@@ -15,16 +15,16 @@
   {% block extrascripts %}{% endblock %}
 </head>
 <body>
-  <div id="doc" class="yui-t4"> 
+  <div id="doc" class="yui-t4">
     <div id="external">
       {% block externals %}
         <a href="http://open.spotify.com/user/ruudud/playlist/6ttvHZmRCyXfr2v01Qsy10">
           <img src="{{ MEDIA_URL }}imgs/spotify.png" title="Kriss Lee på Spotify" alt="Kriss Lee på Spotify" />
         </a><br/>
-        <a href="https://www.facebook.com/event.php?eid=122655991141852"> 
+        <a href="https://www.facebook.com/event.php?eid=122655991141852">
           <img src="{{ MEDIA_URL }}imgs/facebook.png" title="Kriss Lee på Facebook" alt="Kriss Lee på Facebook" />
         </a><br/>
-        <a href="http://www.kapptilkapp.no/"> 
+        <a href="http://www.kapptilkapp.no/">
           <img src="{{ MEDIA_URL }}imgs/kapptilkapp.png" title="Kapp til kapp" alt="Kapp til kapp" />
         </a><br/>
       {% endblock %}
@@ -33,11 +33,11 @@
       <a href="/"><img alt="Kriss Lee 2011" src="{{ MEDIA_URL }}imgs/all4thechildren.png" /></a>
       <div id="countdown"></div>
       <div id="date"><h1>1. - 3. juli</h1></div>
-    </div> 
-    <div id="bd"> 
-      <div id="yui-main"> 
+    </div>
+    <div id="bd">
+      <div id="yui-main">
         <div class="yui-b">
-          <div id="menu" class="yui-g"> 
+          <div id="menu" class="yui-g">
             <ul>
                 <li>
                   <span class="icon" style="background-image: url('{{ ICON_URL }}house.png')">
@@ -47,11 +47,6 @@
                 <li>
                   <span class="icon" style="background-image: url('{{ ICON_URL }}newspaper.png')">
                     <a href="http://krisslee.blogspot.com/">Blogg</a>
-                  </span>
-                </li>
-                <li>
-                  <span class="icon" style="background-image: url('{{ ICON_URL }}script_add.png')">
-                    <a href="/registration/">Registrering</a>
                   </span>
                 </li>
                 <li>
@@ -65,19 +60,13 @@
                   </span>
                 </li>
             </ul>
-          </div> 
-          <div id="content" class="yui-g"> 
+          </div>
+          <div id="content" class="yui-g">
             {% block content %}{% endblock %}
-          </div> 
-        </div> 
-      </div> 
-      <div id="info" class="yui-b">
-        <div id="reg_cont">
-          <a href="/registration/">
-            <img id="regImg" class="padd_3" alt="Meld deg på!" src="{{ MEDIA_URL }}imgs/meldpaa.png" />
-          </a>
+          </div>
         </div>
-        <hr />
+      </div>
+      <div id="info" class="yui-b">
         <a href="/jukebox/">
           <img id="bookImg" alt="Booking 2011" src="{{ MEDIA_URL }}imgs/booking.png" />
         </a>
@@ -89,15 +78,15 @@
           Kontakt <a
           href="mailto:endre@krisslee.no">personalansvarlig</a>!
         </p>
-      </div> 
-    </div> 
+      </div>
+    </div>
     <div id="ft">
       <p>
         &copy; Kriss Lee Festivalen 2005-2011<br/>
         <span style="background-image: url('{{ ICON_URL }}email.png')" class="icon"><a href="/contact/">Nettsideansvarlig</a></span> |
         <span style="background-image: url('{{ ICON_URL }}layout.png')" class="icon"><a href="/colophon/">Kolofon</a></span>
       </p>
-    </div> 
-  </div> 
+    </div>
+  </div>
 </body>
 </html>
