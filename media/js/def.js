@@ -1,32 +1,8 @@
-/** Holding variables **/
-//Jiggle containers
-var timers = new Array();
-var dir = 0;
-var current_obj;
-
 $(document).ready(function() {
     /** Menu init **/
     $('#menu li').click(function(){
         location.href = $(this).children('span').children('a').attr('href');
     });
-    $('#menu li').mouseover(function(){
-        $(this).children('span').children('a').css({'color': '#000'});
-    });
-    $('#menu li').mouseout(function(){
-        $(this).children('span').children('a').css({'color': '#FFF'});
-    });
-
-    /** Count-down init **/
-    var lee_date = new Date(2011, 7-1, 1, 18);
-
-    if ((new Date()).getTime() < lee_date) {
-        $('#countdown').countdown({
-                alwaysExpire: true,
-                until: lee_date,
-                compact: true,
-                layout:'Slapp av, det er bare <span>{dn}</span> dager, <span>{hnn}</span> timer, <span>{mnn}</span> minutter og <span>{snn}</span> sekunder igjen.'
-            });
-    }
 
     /** Jukebox init **/
     if ($('#jukebox').length) {

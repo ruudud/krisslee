@@ -1,10 +1,10 @@
+{% load url_utils %}
 {% block doctype %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 {% endblock %}
 <head>
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans" type="text/css" />
   <title>Kriss Lee Festivalen 2011</title>
   <link rel="stylesheet" href="{{ MEDIA_URL }}styles/reset-fonts-grids.css" type="text/css" />
   <link rel="stylesheet" href="{{ MEDIA_URL }}styles/base-min.css" type="text/css" />
@@ -37,22 +37,22 @@
         <div class="yui-b">
           <div id="menu" class="yui-g">
             <ul>
-                <li>
+                <li class="{% current "/" %}">
                   <span class="icon" style="background-image: url('{{ ICON_URL }}house.png')">
                     <a href="/">Forside</a>
                   </span>
                 </li>
-                <li>
+                <li class="inactive">
                   <span class="icon" style="background-image: url('{{ ICON_URL }}newspaper.png')">
                     <a href="http://krisslee.blogspot.com/">Blogg</a>
                   </span>
                 </li>
-                <li>
+                <li class="{% current "/jukebox/" %}">
                   <span class="icon" style="background-image: url('{{ ICON_URL }}cd.png')">
                     <a href="/jukebox/">Jukebox</a>
                   </span>
                 </li>
-                <li>
+                <li class="{% current "/contact/" %}">
                   <span class="icon" style="background-image: url('{{ ICON_URL }}email.png')">
                     <a href="/contact/">Kontakt</a>
                   </span>
