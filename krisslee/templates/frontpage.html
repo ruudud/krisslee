@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block extrascripts %}
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.countdown.min.js"></script>
   <script type="text/javascript" src="{{ MEDIA_URL }}js/galleria.js"></script>
   <script type="text/javascript">
-    
+
     $(document).ready(function() {
       Galleria.loadTheme('{{ MEDIA_URL }}js/themes/classic/galleria.classic.js');
       $(document).konami(function(){
@@ -16,7 +17,7 @@
 
       {% if pictures %}
         $('#gallery').galleria({
-          transition_speed: 700 
+          transition_speed: 700
         });
       {% endif %}
     });
@@ -32,21 +33,8 @@
   {% endif %}
 {% endblock %}
 {% block content %}
-  <p>
-    <span class="head">Hei, og velkommen.</span>
-    Også i 2011 gjennomføres festivalen Kriss Lee.<br />
-    Siden fjorårets begivenhet ble en heidundranes suksess, blir det også i år
-    innsamling til Unicef via Kapp til Kapp-gutta. 
-    Følg med på
-    <a href="https://www.facebook.com/event.php?eid=122655991141852">
-        eventsiden på Facebook
-    </a>
-    eller
-    <a href="http://krisslee.blogspot.com/">
-        bloggen
-    </a> for oppdateringer.</br>
-    Kos deg med disse bildene mens du følger nedtellingen til årets fest:
-  </p>
+  <p><span id="countdown"></span> I mellomtiden kan du kose deg med disse bildene
+  fra de siste fem årene:</p>
   {% if pictures %}
     <ul id="gallery">
       {% for pic in pictures %}
@@ -54,18 +42,11 @@
       {% endfor %}
     </ul>
   {% endif %}
-  <span id="showhelp">Vis hjelpetekst</span>
+  <p>
+      Hold musepekeren over galleriet for å pause avspillingen.
+      Trykk <strong>j</strong> og <strong>k</strong> for å gå tilbake og fram.
+  </p>
   <div id="ninja">
     <img src="{{ MEDIA_URL }}imgs/ninja.gif" alt="Ninja!" />
-  </div>
-  <div id="important">
-    <p class="imp_text">
-      <span class="bold icon icon_pad" style="background-image: url('{{ ICON_URL }}information.png')">
-        Gallerihjelp:
-      </span>
-      Hold musepekeren over galleriet for å pause avspillingen.
-      Trykk <strong>j</strong> og <strong>k</strong> for å gå tilbake og fram i
-      galleriet.
-    </p>
   </div>
 {% endblock %}

@@ -24,13 +24,8 @@ $(document).ready(function() {
                 alwaysExpire: true,
                 until: lee_date,
                 compact: true,
-                layout:'Slapp av, det er bare <br/><span>{dn}</span>d <span>{hnn}</span>t <span>{mnn}</span>m <span>{snn}</span>s igjen.'
+                layout:'Slapp av, det er bare <span>{dn}</span> dager, <span>{hnn}</span> timer, <span>{mnn}</span> minutter og <span>{snn}</span> sekunder igjen.'
             });
-    }
-
-    /** Important text **/
-    if ($('#important').length) {
-        window.setTimeout('important()', 6000);
     }
 
     /** Jukebox init **/
@@ -53,16 +48,6 @@ $(document).ready(function() {
         }
     }
 });
-
-function important() {
-    $('#showhelp').click(function() {
-        $('#showhelp').hide();
-        $('#important').show();
-    });
-    $('#important').fadeOut(600);
-    window.setTimeout('$(\'#showhelp\').show()', 1000);
-    ;
-}
 
 (function($) {
 
