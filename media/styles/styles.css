@@ -43,7 +43,7 @@ hr {
     padding: 0px 5px;
 }
 #doc {
-    font-family: 'Droid Sans', arial, serif;
+    font-family: arial, serif;
 }
 #gallery {
     text-align: center;
@@ -250,24 +250,24 @@ a:hover {
     border-bottom: 1px solid #AAA;
 }
 #menu li {
-    margin-left: 3px;
     padding: 4px 0px 1px 2px;
     border-bottom: 0px;
     display: inline;
     color: #FFF;
 }
-#menu li a {
-    color: #FFF;
+#menu li.active {
+    border: solid 1px #FFF;
+    border-bottom: solid 1px #000;
 }
-#menu li:hover {
-    background-color: #FFF;
-    color: #000;
+#menu li.unactive:hover {
     cursor: pointer;
-}
-#menu li span {
-    padding-top: 3px;
+    background-color: #555753;
 }
 #menu li a {
     text-decoration: none;
     padding: 0em 0.5em 0em 0em;
 }
+#menu li a:hover {
+    color: #FFF;
+}
+
