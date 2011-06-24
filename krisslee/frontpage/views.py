@@ -6,7 +6,7 @@ from django.conf import settings
 from django.http import HttpResponseNotAllowed, HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
- 
+
 def front(request):
     pictures = cache.get('pictures')
     if not pictures:
@@ -15,7 +15,7 @@ def front(request):
         pictures = [f for f in images if f[-3:] == 'jpg']
         if pictures:
             cache.set('pictures', pictures, 86400)
-    
+
     yr_data = cache.get('yr_data')
     if not yr_data:
         yr_data = {}
@@ -31,9 +31,9 @@ def front(request):
         except:
             pass
 
-    return render_to_response('frontpage.html', 
+    return render_to_response('frontpage.html',
         {
-            'pictures': pictures, 
+            'pictures': pictures,
             'yr_data': yr_data,
-        }, 
+        },
         context_instance=RequestContext(request))
