@@ -22,6 +22,7 @@ hr {
 }
 #doc {
     position: relative;
+    font-family: arial, serif;
 }
 #external {
     position: absolute;
@@ -41,9 +42,6 @@ hr {
 #content {
     margin-top: 1em;
     padding: 0px 5px;
-}
-#doc {
-    font-family: arial, serif;
 }
 #gallery {
     text-align: center;
