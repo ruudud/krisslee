@@ -10,3 +10,4 @@ class URLUtilTests(TestCase):
     def test_current_url_should_return_active(self):
         request = self.factory.get('/')
         self.failUnlessEqual('active', current(request, '/'))
+        self.failUnlessEqual('inactive', current(request, '/jukebox/'))
