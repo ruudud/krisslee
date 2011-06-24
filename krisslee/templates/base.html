@@ -37,7 +37,7 @@
         <div class="yui-b">
           <div id="menu" class="yui-g">
             <ul>
-                <li class="{% current "/" %}">
+                <li class="{% current request "/" %}">
                   <span class="icon" style="background-image: url('{{ ICON_URL }}house.png')">
                     <a href="/">Forside</a>
                   </span>
@@ -47,12 +47,12 @@
                     <a href="http://krisslee.blogspot.com/">Blogg</a>
                   </span>
                 </li>
-                <li class="{% current "/jukebox/" %}">
+                <li class="{% current request "/jukebox/" %}">
                   <span class="icon" style="background-image: url('{{ ICON_URL }}cd.png')">
                     <a href="/jukebox/">Jukebox</a>
                   </span>
                 </li>
-                <li class="{% current "/contact/" %}">
+                <li class="{% current request "/contact/" %}">
                   <span class="icon" style="background-image: url('{{ ICON_URL }}email.png')">
                     <a href="/contact/">Kontakt</a>
                   </span>
