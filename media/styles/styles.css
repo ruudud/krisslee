@@ -47,16 +47,6 @@ hr {
     text-align: center;
     margin-left: auto;
 }
-#date {
-    position: absolute;
-    background-image: url('/media/ikoner/time.png');
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 20px;
-    left: 610px;
-    top: 30px;
-    color: #FFF;
-}
 #ninja {
     display: none;
     position: fixed;
