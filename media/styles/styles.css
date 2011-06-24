@@ -35,8 +35,8 @@ hr {
     position: relative;
 }
 #ft {
-    text-align: center;
-    padding-top: 10px;
+    text-align: right;
+    margin-top: 30px;
 }
 #content {
     margin-top: 1em;
