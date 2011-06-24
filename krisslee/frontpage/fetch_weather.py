@@ -13,8 +13,8 @@ CURRENT_WEATHER = SCRIPT_ROOT + '/current_weather.py'
 doc = xml.dom.minidom.parse(YR_XML)
 tabular = doc.getElementsByTagName('tabular')
 if tabular:
-    current = tabular[0].getElementsByTagName('time')[0]
-    if current:    
+    current = tabular[0].getElementsByTagName('time')[1]
+    if current:
         symbol_tag = current.getElementsByTagName('symbol')[0]
         temp_tag = current.getElementsByTagName('temperature')[0]
 
@@ -31,9 +31,9 @@ if tabular:
             eight = time(20, 00)
             symbol = None
             if ((cl > five) and (cl < eight)):
-                symbol = '%sd' % symbol_num 
+                symbol = '%sd' % symbol_num
             else:
-                symbol = '%sn' % symbol_num 
+                symbol = '%sn' % symbol_num
 
             w_file = codecs.open(CURRENT_WEATHER, 'w', 'utf-8')
             w_file.write('%s;%s;%s' % (symbol, description, temperature))
