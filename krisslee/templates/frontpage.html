@@ -17,7 +17,8 @@
                   compact: true,
                   layout:'Slapp av, det er bare <span>{dn}</span> dager, ' +
                          '<span>{hnn}</span> timer, <span>{mnn}</span> minutter' +
-                         ' og <span>{snn}</span> sekunder igjen.'
+                         ' og <span>{snn}</span> sekunder igjen til fredag 1. ' +
+                         'juli.'
               });
       }
 
@@ -48,8 +49,10 @@
   {% endif %}
 {% endblock %}
 {% block content %}
-  <p><span id="countdown"></span> I mellomtiden kan du kose deg med disse bildene
-  fra de siste fem årene:</p>
+  <p>
+    <span id="countdown"></span><br/>
+    I mellomtiden kan du kose deg med disse bildene fra de siste fem årene:
+  </p>
   {% if pictures %}
     <ul id="gallery">
       {% for pic in pictures %}
