@@ -25,7 +25,7 @@ hr {
 }
 #external {
     position: absolute;
-    top: 200px; 
+    top: 275px;
     left: -55px;
 }
 #external a {
@@ -156,7 +156,7 @@ hr {
     margin-left: 20px;
 }
 #playlist li:hover {
-    text-decoration: underline;    
+    text-decoration: underline;
     cursor: pointer;
 }
 #playlist ol {
@@ -169,7 +169,7 @@ hr {
 #playlist li {
     border-bottom: 1px solid #FFF;
     background-repeat: no-repeat;
-    background-position: 0px; 
+    background-position: 0px;
     padding: 2px 0px 2px 18px;
 }
 .video {
