@@ -36,25 +36,17 @@
         <div class="yui-b">
           <div id="menu" class="yui-g">
             <ul>
-                <li class="{% current request "frontpage" %}">
-                  <span class="icon" style="background-image: url('{{ ICON_URL }}house.png')">
-                    <a href="/">Forside</a>
-                  </span>
+                <li{% current request "frontpage" %}>
+                    <a style="background-image: url('{{ ICON_URL }}house.png')" href="/">Forside</a>
                 </li>
                 <li class="inactive">
-                  <span class="icon" style="background-image: url('{{ ICON_URL }}newspaper.png')">
-                    <a href="http://krisslee.blogspot.com/">Blogg</a>
-                  </span>
+                    <a style="background-image: url('{{ ICON_URL }}newspaper.png')" href="http://krisslee.blogspot.com/">Blogg</a>
                 </li>
-                <li class="{% current request "jukebox" %}">
-                  <span class="icon" style="background-image: url('{{ ICON_URL }}cd.png')">
-                    <a href="/jukebox/">Jukebox</a>
-                  </span>
+                <li{% current request "jukebox" %}>
+                    <a style="background-image: url('{{ ICON_URL }}cd.png')" href="/jukebox/">Jukebox</a>
                 </li>
-                <li class="{% current request "/contact/" %}">
-                  <span class="icon" style="background-image: url('{{ ICON_URL }}email.png')">
-                    <a href="/contact/">Kontakt</a>
-                  </span>
+                <li{% current request "/contact/" %}>
+                    <a style="background-image: url('{{ ICON_URL }}email.png')" href="/contact/">Kontakt</a>
                 </li>
             </ul>
           </div>
