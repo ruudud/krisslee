@@ -230,6 +230,7 @@ a:hover {
 
 /** Menu styles **/
 #menu ul {
+    line-height: normal;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -237,23 +238,31 @@ a:hover {
     text-align: center;
     border-bottom: 1px solid #AAA;
 }
-#menu li {
-    padding: 4px 0px 1px 2px;
-    border-bottom: 0px;
+#menu ul li {
     display: inline;
     color: #FFF;
 }
-#menu li.active {
-    border: solid 1px #FFF;
+#menu li.active a {
+    border: solid 1px #AAA;
     border-bottom: solid 1px #000;
 }
-#menu li.inactive:hover {
+#menu li a:hover {
     cursor: pointer;
     background-color: #555753;
+    border-bottom: 1px solid #AAA;
+}
+#menu li.active a:hover {
+    cursor: pointer;
+    background-color: #000;
+    border-bottom: 2px solid #000;
 }
 #menu li a {
+    background-repeat: no-repeat;
+    background-position: 8px 5px;
     text-decoration: none;
-    padding: 0em 0.5em 0em 0em;
+    padding-top: 5px;
+    padding-left: 26px;
+    padding-right: 9px;
 }
 #menu li a:hover {
     color: #FFF;
