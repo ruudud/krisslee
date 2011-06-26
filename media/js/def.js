@@ -1,9 +1,4 @@
 $(document).ready(function() {
-    /** Menu init **/
-    $('#menu li').click(function(){
-        location.href = $(this).children('span').children('a').attr('href');
-    });
-
     /** Jukebox init **/
     if ($('#jukebox').length) {
         if (!!document.createElement('audio').canPlayType) {
