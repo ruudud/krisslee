@@ -10,10 +10,10 @@ def current(request, uri):
         try:
             uri = reverse(uri)
         except NoReverseMatch:
-            return 'inactive'
+            return ''
 
     if request.path == uri:
-        return 'active'
+        return ' class="active"'
 
-    return 'inactive'
+    return ''
 

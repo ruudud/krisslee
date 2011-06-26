@@ -11,13 +11,13 @@ class URLUtilTests(TestCase):
 
     def test_current_url_should_return_active(self):
         request = self.factory.get('/')
-        self.failUnlessEqual('active', current(request, '/'))
-        self.failUnlessEqual('inactive', current(request, '/jukebox/'))
+        self.failUnlessEqual(' class="active"', current(request, '/'))
+        self.failUnlessEqual('', current(request, '/jukebox/'))
 
-    def test_current_reverse_url_should_return_active(self):
+    def test_current_reverse_url_should_return_class_active(self):
         request = self.factory.get(reverse('frontpage'))
-        self.failUnlessEqual('active', current(request, 'frontpage'))
+        self.failUnlessEqual(' class="active"', current(request, 'frontpage'))
 
-    def test_missing_url_should_fail_with_inactive(self):
+    def test_missing_url_should_fail_with_blank_response(self):
         request = self.factory.get('/')
-        self.failUnlessEqual('inactive', current(request, 'frontpagezz'))
+        self.failUnlessEqual('', current(request, 'frontpagezz'))
