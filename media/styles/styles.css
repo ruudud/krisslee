@@ -268,3 +268,15 @@ a:hover {
     color: #FFF;
 }
 
+/** Random **/
+.grey_box {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px 50px 0;
+    background-image: -moz-linear-gradient(left top, #fcfcfc, #ffd451 12%, #fcda6c 90%, #ffd451);
+    background-image: -webkit-gradient(linear, left top, center bottom, from(#fcfcfc), to(#ffd451), color-stop(12%, #f3efdf), color-stop(90%, #fcda6c));
+    box-shadow: 0 1px 5px rgba(255,255,255,0.75);
+}
