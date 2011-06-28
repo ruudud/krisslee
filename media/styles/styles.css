@@ -1,15 +1,17 @@
 /** General styles **/
+* {
+    padding: 0;
+    margin: 0;
+}
 html {
-    padding-top: 5px;
-    background-color: #000;
+    background-color: #F1F1F1;
     color: #FFF;
+}
+body {
+    font-family: Georgia, serif;
 }
 img {
     border: 0;
-}
-.icon {
-    background-repeat: no-repeat;
-    padding-left: 18px;
 }
 hr {
     color: #AAA;
@@ -20,9 +22,12 @@ hr {
     height: 1px;
     border-width: 0px;
 }
+.icon {
+    background-repeat: no-repeat;
+    padding-left: 18px;
+}
 #doc {
     position: relative;
-    font-family: arial, serif;
 }
 #external {
     position: absolute;
@@ -35,13 +40,28 @@ hr {
 #hd {
     position: relative;
 }
+#widthwrap {
+    background-color: #000;
+    padding-bottom: 50px;
+}
 #ft {
-    text-align: right;
-    margin-top: 30px;
+    text-align: center;
+    font-size: 115%;
+    margin: 0;
+    padding: 25px 0 0 0;
+    color: #000;
+    border-top: 4px solid #DDD;
+    background: #F1F1F1;
+    background-image: -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #f2f2f2 90%, #f1f1f1);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#f1f1f1), color-stop(3%, #f7f7f7), color-stop(12%, #f2f2f2), color-stop(90%, #f2f2f2));
+}
+#ft a:link, #ft a:visited, #ft a:active {
+    color: #000;
 }
 #content {
     margin-top: 1em;
     padding: 0px 5px;
+    font-size: 110%;
 }
 #gallery {
     text-align: center;
@@ -213,6 +233,11 @@ h3 {
 #info h3 {
     margin: 1em 0px 0.2em 0px;
 }
+#countdown span {
+    width: 1em;
+    padding-right: 0.4em;
+    display: inline-block;
+}
 a:link, a:visited, a:active {
     color: #FFF;
 }
@@ -222,7 +247,8 @@ a:hover {
 .head {
     margin-right: 1em;
     font-weight: bold;
-    font-size: 108%;
+    font-size: 140%;
+    font-family: Georgia;
 }
 .hidden {
     display: none;
@@ -230,7 +256,9 @@ a:hover {
 
 /** Menu styles **/
 #menu ul {
+    font-family: arial, sans-serif;
     line-height: normal;
+    font-size: 110%;
     list-style: none;
     padding: 0;
     margin: 0;

@@ -14,6 +14,7 @@
   {% block extrascripts %}{% endblock %}
 </head>
 <body>
+  <div id="widthwrap">
   <div id="doc" class="yui-t4">
     <div id="external">
       {% block externals %}
@@ -30,26 +31,26 @@
     </div>
     <div id="hd">
       <a href="/"><img alt="Kriss Lee 2011" src="{{ MEDIA_URL }}imgs/all4thechildren.png" /></a>
+      <div id="menu" class="yui-g">
+        <ul>
+            <li{% current request "frontpage" %}>
+                <a style="background-image: url('{{ ICON_URL }}house.png')" href="/">Forside</a>
+            </li>
+            <li class="inactive">
+                <a style="background-image: url('{{ ICON_URL }}newspaper.png')" href="http://krisslee.blogspot.com/">Blogg</a>
+            </li>
+            <li{% current request "jukebox" %}>
+                <a style="background-image: url('{{ ICON_URL }}cd.png')" href="/jukebox/">Jukebox</a>
+            </li>
+            <li{% current request "/contact/" %}>
+                <a style="background-image: url('{{ ICON_URL }}email.png')" href="/contact/">Kontakt</a>
+            </li>
+        </ul>
+      </div>
     </div>
     <div id="bd">
       <div id="yui-main">
         <div class="yui-b">
-          <div id="menu" class="yui-g">
-            <ul>
-                <li{% current request "frontpage" %}>
-                    <a style="background-image: url('{{ ICON_URL }}house.png')" href="/">Forside</a>
-                </li>
-                <li class="inactive">
-                    <a style="background-image: url('{{ ICON_URL }}newspaper.png')" href="http://krisslee.blogspot.com/">Blogg</a>
-                </li>
-                <li{% current request "jukebox" %}>
-                    <a style="background-image: url('{{ ICON_URL }}cd.png')" href="/jukebox/">Jukebox</a>
-                </li>
-                <li{% current request "/contact/" %}>
-                    <a style="background-image: url('{{ ICON_URL }}email.png')" href="/contact/">Kontakt</a>
-                </li>
-            </ul>
-          </div>
           <div id="content" class="yui-g">
             {% block content %}{% endblock %}
           </div>
@@ -61,13 +62,14 @@
         </a>
       </div>
     </div>
-    <div id="ft">
-      <p>
-        &copy; Kriss Lee Festivalen 2005-2011<br/>
-        <span style="background-image: url('{{ ICON_URL }}email.png')" class="icon"><a href="/contact/">Nettsideansvarlig</a></span> |
-        <span style="background-image: url('{{ ICON_URL }}layout.png')" class="icon"><a href="/colophon/">Kolofon</a></span>
-      </p>
-    </div>
+  </div>
+  </div>
+  <div id="ft">
+    <p>
+      &copy; Kriss Lee Festivalen 2005-2011<br/>
+      <span style="background-image: url('{{ ICON_URL }}email.png')" class="icon"><a href="/contact/">Nettsideansvarlig</a></span> |
+      <span style="background-image: url('{{ ICON_URL }}layout.png')" class="icon"><a href="/colophon/">Kolofon</a></span>
+    </p>
   </div>
 </body>
 </html>
