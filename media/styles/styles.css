@@ -4,7 +4,7 @@
     margin: 0;
 }
 html {
-    background-color: #F1F1F1;
+    background-color: #EBEBEB;
     color: #FFF;
 }
 body {
@@ -24,7 +24,7 @@ hr {
 }
 .icon {
     background-repeat: no-repeat;
-    padding-left: 18px;
+    padding-left: 20px;
 }
 #doc {
     position: relative;
@@ -47,15 +47,20 @@ hr {
 }
 #ft {
     text-align: center;
+    font-family: arial, sans-serif;
+    line-height: 150%;
     font-size: 115%;
     margin: 0;
     padding: 25px 0 0 0;
     color: #000;
-    border-top: 3px solid #AAA;
-    background: #F1F1F1;
+    border-top: 3px solid #D7D7D7;
+    background-color: #EBEBEB;
 }
 #ft a:link, #ft a:visited, #ft a:active {
     color: #000;
+}
+#ft .spacer {
+    margin: 0 0.5em;
 }
 #content {
     margin-top: 1em;
