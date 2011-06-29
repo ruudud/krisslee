@@ -34,13 +34,16 @@
       <div id="menu" class="yui-g">
         <ul>
             <li{% current request "frontpage" %}>
-                <a style="background-image: url('{{ ICON_URL }}house.png')" href="/">Forside</a>
+                <a style="background-image: url('{{ ICON_URL }}house.png')" href="{% url frontpage %}">Forside</a>
             </li>
             <li class="inactive">
                 <a style="background-image: url('{{ ICON_URL }}newspaper.png')" href="http://krisslee.blogspot.com/">Blogg</a>
             </li>
             <li{% current request "jukebox" %}>
-                <a style="background-image: url('{{ ICON_URL }}cd.png')" href="/jukebox/">Jukebox</a>
+                <a style="background-image: url('{{ ICON_URL }}cd.png')" href="{% url jukebox %}">Jukebox</a>
+            </li>
+            <li{% current request "snuscalc" %}>
+                <a style="background-image: url('{{ ICON_URL }}calculator_add.png')" href="{% url snuscalc %}">Snuskalk</a>
             </li>
             <li{% current request "/contact/" %}>
                 <a style="background-image: url('{{ ICON_URL }}email.png')" href="/contact/">Kontakt</a>
