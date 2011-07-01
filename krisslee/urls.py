@@ -6,9 +6,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'krisslee.frontpage.views.front', name='frontpage'),
+    url(r'^contributions/$', 'krisslee.contribution.views.take',
+        name='contributions'),
     (r'^admin/', include(admin.site.urls)),
     url(r'^jukebox/', 'django.views.generic.simple.direct_to_template', {
-            'template': 'jukebox.html', 
+            'template': 'jukebox.html',
         }, name='jukebox'),
 )
 #Hack to get testserver to serve media
