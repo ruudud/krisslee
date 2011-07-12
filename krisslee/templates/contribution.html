@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<p>
+  <form action="." method="POST">
+  {{ take_form }} 
+    <input type="submit" value="OK!" />
+  </form>
+</p>
+<p>
+  {% for c in contributions %}
+      {{ c.name }} - {{ c.amount }}<br/>
+  {% endfor %}
+  <hr/>
+  Tilsammen: {{ total.name__count }} stk og {{ total.amount__sum }} kr
+
+</p>
+{% endblock %}
