@@ -56,7 +56,7 @@
   {% if pictures %}
     <ul id="gallery">
       {% for pic in pictures %}
-        <li><img src="{{ MEDIA_URL }}pics/{{ pic }}" alt="" /></li>
+          <li><img src="{{ pic.url }}" alt="{{ pic.alt }}" /></li>
       {% endfor %}
     </ul>
   {% endif %}
