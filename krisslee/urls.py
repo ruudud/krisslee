@@ -5,7 +5,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'krisslee.frontpage.views.front', name='frontpage'),
+    url(r'^$', 'krisslee.gallery.views.list', name='frontpage'),
+    url(r'^contributions/$', 'krisslee.contribution.views.take',
+        name='contributions'),
     (r'^admin/', include(admin.site.urls)),
     url(r'^jukebox/', 'django.views.generic.simple.direct_to_template', {
             'template': 'jukebox.html',
