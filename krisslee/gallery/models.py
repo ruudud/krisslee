@@ -5,5 +5,5 @@ class Picture(models.Model):
     text = models.CharField(max_length=200, help_text='Used for alt attrib',
                             blank=True, null=True)
 
-    def unicode(self):
-        print self.url
+    def __unicode__(self):
+        return self.text or self.url
