@@ -1,8 +1,27 @@
 {% extends "base.html" %}
 {% block extrascripts %}
-  <script type="text/javascript" src="{{ MEDIA_URL }}js/snuscalc.js"></script>
-  <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.magicpreview.pack.js"></script>
+  <link rel="stylesheet" href="{{ MEDIA_URL }}styles/jquery-ui-1.8.14.custom.css" type="text/css" />
   <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui-1.8.14.custom.min.js"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/snuscalc.js"></script>
 {% endblock %}
 {% block content %}
+<p>
+    <label for="hours">Hvor mange timer varer festen i dag?</label>
+    <input type="text" value="8" id="hours" />
+</p>
+<p>
+    <label for="capita">Hvor mye midler har du til rådighet? (0 for ubegrenset)</label>
+    <input type="text" value="0" id="captia" />
+</p>
+<p>
+    <label for="current">Fordeling:</label>
+    <span id="current"></span>
+    <input type="hidden" id="distribution" />
+    <div id="snusvssmoke"></div>
+</p>
+<p style="margin-top: 3em">
+<div class="grey_box" style="width: 400px">
+    <h3>Resultat</h3>
+</div>
+</p>
 {% endblock %}
